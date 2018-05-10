@@ -9,17 +9,17 @@
 
 using namespace std;
 
-/// Gère la modélisation de la table
+/// GÃ¨re la modÃ©lisation de la table
 class Table
 {
     public:
         /// Constructeur de la classe Table
         Table();
 
-        /// Fonction utilité
+        /// Fonction utilitÃ©
         int utilite();
 
-        /// Permet de placer les pions dans la tableau
+        /// Permet de placer les pions dans le tableau
         void placerPion(int,int);
 
         /// Retourne vrai si une colonne de la table est vide
@@ -31,11 +31,11 @@ class Table
         /// Permet de colorier les pions du gagnant
         void colorierGagnant();
 
-        /// Génère les successeurs de la table en se basant sur les règles du jeu
+        /// GÃ©nÃ¨re les successeurs de la table en se basant sur les rÃ¨gles du jeu
         vector <Table> genereSuccesseurs(int);
 
-        /// Définition de la fonction heuristique implémentée dans les algos Minimax et AlphaBeta
-        /// @utilise les méthodes nbrDe3DeSuite et nbrDe2DeSuite
+        /// DÃ©finition de la fonction heuristique implÃ©mentÃ©e dans les algos Minimax et AlphaBeta
+        /// @utilise les mÃ©thodes nbrDe3DeSuite et nbrDe2DeSuite
         int fonctionHeuristique();
 
         /// Retourne la table ayant le plus grand poids
@@ -53,16 +53,16 @@ class Table
         /// Getteur du poids de la table
         int getPoids();
 
-        /// Getteur du poids d'une case dont les coordonnées sont données en @param
+        /// Getteur du poids d'une case dont les coordonnÃ©es sont donnÃ©es en @param
         int getT(int, int);
 
-        /// Setteur du poids d'une case dont les coordonnées sont données en @param
+        /// Setteur du poids d'une case dont les coordonnÃ©es sont donnÃ©es en @param
         void setT(int, int, int);
 
-        /// Retourne le nombres de triplets successifs selon les règles du jeu
+        /// Retourne le nombres de triplets successifs selon les rÃ¨gles du jeu
         int nbrDe3DeSuite(int);
 
-        /// Retourne le nombres de couples successifs selon les règles du jeu
+        /// Retourne le nombres de couples successifs selon les rÃ¨gles du jeu
         int nbrDe2DeSuite(int);
 
     protected:

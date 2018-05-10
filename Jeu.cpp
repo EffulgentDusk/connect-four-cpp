@@ -19,19 +19,19 @@ Jeu::Jeu()
 
     fenetre = al_create_display(1100, 620);
     imageGrille = al_load_bitmap("images/tablejeu.png");
-	pionJaune = al_load_bitmap("images/pionjaune.png");
-	pionRouge = al_load_bitmap("images/pionrouge.png");
-	pionVert = al_load_bitmap("images/piongagnant.png");
-	menuPrincipal = al_load_bitmap("images/menu.png");
-	joueur1 = al_load_bitmap("images/joueur1.png");
-	joueur2 = al_load_bitmap("images/joueur2.png");
-	joueur = al_load_bitmap("images/joueur.png");
+    pionJaune = al_load_bitmap("images/pionjaune.png");
+    pionRouge = al_load_bitmap("images/pionrouge.png");
+    pionVert = al_load_bitmap("images/piongagnant.png");
+    menuPrincipal = al_load_bitmap("images/menu.png");
+    joueur1 = al_load_bitmap("images/joueur1.png");
+    joueur2 = al_load_bitmap("images/joueur2.png");
+    joueur = al_load_bitmap("images/joueur.png");
     intelligenceA = al_load_bitmap("images/IA.png");
     fenetreParametre = al_load_bitmap("images/popsettings.png");
     icone = al_load_bitmap("images/icon.png");
     al_set_display_icon(fenetre, icone);
 	queue = al_create_event_queue();
-	/// Les variables sound_bool, rencontrées plus loin dans le code sont utilisées pour éviter que certains sons sont répétées en boucle
+	/// Les variables sound_bool, rencontrÃ©es plus loin dans le code sont utilisÃ©es pour Ã©viter que certains sons sont rÃ©pÃ©tÃ©es en boucle
 
     al_register_event_source(queue, al_get_display_event_source(fenetre));
 	al_register_event_source(queue, al_get_mouse_event_source());
@@ -597,7 +597,7 @@ bool Jeu::placerPion(int pion, int x, int y)
 
 Table Jeu::minMax(int profondeurDynamique, int tour, int profondeurVoulue)
 {
-    /// Si la grille est pleine, retourner l'utilité correspondant a l'égalité
+    /// Si la grille est pleine, retourner l'utilitÃ© correspondant a l'Ã©galitÃ©
     if(grille.tablePleine())
     {
         grille.setPoids(grille.utilite());
@@ -606,12 +606,12 @@ Table Jeu::minMax(int profondeurDynamique, int tour, int profondeurVoulue)
     /// Si on a un gagnant
     else if(grille.verifierGagnant(gagnant))
     {
-        /// Si le gagnant est Max, retourner l'utilité moins la profondeur (amélioration)
+        /// Si le gagnant est Max, retourner l'utilitÃ© moins la profondeur (amÃ©lioration)
         if (gagnant == 1)
         {
             grille.setPoids(grille.utilite() - profondeurDynamique);
         }
-        /// Si le gagnant est Min, retourner l'utilité plus la profondeur (amélioration)
+        /// Si le gagnant est Min, retourner l'utilitÃ© plus la profondeur (amÃ©lioration)
         else if(gagnant == 2)
         {
             grille.setPoids(grille.utilite() + profondeurDynamique);
@@ -626,7 +626,7 @@ Table Jeu::minMax(int profondeurDynamique, int tour, int profondeurVoulue)
         return grille;
     }
 
-    /// Sinon, on génere les successeurs
+    /// Sinon, on gÃ©nere les successeurs
     else
     {
         Table Tablev, copieGrille = grille;
@@ -635,13 +635,13 @@ Table Jeu::minMax(int profondeurDynamique, int tour, int profondeurVoulue)
         {
 
             Tablev.setPoids(-10000);
-            /// Génération des successeurs
+            /// GÃ©nÃ©ration des successeurs
             vector <Table> listNoeuds = grille.genereSuccesseurs(2);
             for (int i = 0 ; i < listNoeuds.size(); i++)
             {
                 nombreDeNoeuds++;
                 grille = listNoeuds[i];
-                /// Appel récursif de la méthode
+                /// Appel rÃ©cursif de la mÃ©thode
                 Tablev = Tablev.maxTable(minMax(profondeurDynamique - 1, tour+1, profondeurVoulue));
             }
 
@@ -658,13 +658,13 @@ Table Jeu::minMax(int profondeurDynamique, int tour, int profondeurVoulue)
         else
         {
             Tablev.setPoids(10000);
-            ///Génération des successeurs
+            ///GÃ©nÃ©ration des successeurs
             vector <Table> listNoeuds = grille.genereSuccesseurs(1);
             for (int i = 0 ; i < listNoeuds.size(); i++)
             {
                 nombreDeNoeuds++;
                 grille = listNoeuds[i];
-                /// Appel récursif de la méthode MiniMax
+                /// Appel rÃ©cursif de la mÃ©thode MiniMax
                 Tablev = Tablev.minTable(minMax(profondeurDynamique - 1,tour-1,profondeurVoulue));
             }
             grille = copieGrille;
@@ -937,7 +937,7 @@ void Jeu::afficherGagnant()
 
 Table Jeu::alphaBeta(int profondeurDynamique, int tour, int profondeurVoulue, Table Tablea, Table Tableb)
 {
-    /// Si la grille est pleine, retourner l'utilité correspondant a l'égalité
+    /// Si la grille est pleine, retourner l'utilitÃ© correspondant a l'Ã©galitÃ©
      if(grille.tablePleine())
     {
         grille.setPoids(grille.utilite());
@@ -945,12 +945,12 @@ Table Jeu::alphaBeta(int profondeurDynamique, int tour, int profondeurVoulue, Ta
     /// Si on a un gagnant
     else if(grille.verifierGagnant(gagnant))
     {
-        /// Si le gagnant est Max, retourner l'utilité moins la profondeur (amélioration)
+        /// Si le gagnant est Max, retourner l'utilitÃ© moins la profondeur (amÃ©lioration)
         if (gagnant == 1)
         {
             grille.setPoids(grille.utilite() - profondeurDynamique);
         }
-        /// Si le gagnant est Min, retourner l'utilité plus la profondeur (amélioration)
+        /// Si le gagnant est Min, retourner l'utilitÃ© plus la profondeur (amÃ©lioration)
         else if(gagnant == 2)
         {
             grille.setPoids(grille.utilite() + profondeurDynamique);
@@ -972,13 +972,13 @@ Table Jeu::alphaBeta(int profondeurDynamique, int tour, int profondeurVoulue, Ta
         if (tour == 1)
         {
             Tablev.setPoids(-10000);
-            /// Génération des successeurs
+            /// GÃ©nÃ©ration des successeurs
             vector <Table> listNoeuds = grille.genereSuccesseurs(2);
             for (int i = 0 ; i < listNoeuds.size(); i++)
             {
                 nombreDeNoeuds++;
                 grille = listNoeuds[i];
-                /// Appel récursif de la méthode alphaBeta
+                /// Appel rÃ©cursif de la mÃ©thode alphaBeta
                 Tablev = Tablev.maxTable(alphaBeta(profondeurDynamique - 1, tour+1, profondeurVoulue, Tablea, Tableb));
                 /// Phase de l'alphaBeta pruning
                 if (Tablev.getPoids() > Tableb.getPoids())
@@ -1008,13 +1008,13 @@ Table Jeu::alphaBeta(int profondeurDynamique, int tour, int profondeurVoulue, Ta
             /// Si c'est le tour de Min
             {
                 Tablev.setPoids(10000);
-            /// Génération des successeurs
+            /// GÃ©nÃ©ration des successeurs
                 vector <Table> listNoeuds = grille.genereSuccesseurs(1);
                 for (int i = 0 ; i < listNoeuds.size(); i++)
                 {
                     nombreDeNoeuds++;
                     grille = listNoeuds[i];
-                    /// Appel récursif de la méthode alphaBeta
+                    /// Appel rÃ©cursif de la mÃ©thode alphaBeta
                     Tablev = Tablev.minTable(alphaBeta(profondeurDynamique - 1, tour-1, profondeurVoulue, Tablea, Tableb));
                     /// Phase de l'alphaBeta pruning
                     if (Tablev.getPoids() < Tablea.getPoids())

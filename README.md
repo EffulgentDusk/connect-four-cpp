@@ -9,5 +9,9 @@ This game was created by [Loukmane Maada](https://github.com/loding1397), [Souka
 
 Some sounds used in the game are originally made by [Chris Kempson](https://github.com/chriskempson) and implemented in his [Connect four version](https://github.com/chriskempson/cpp-connect-four), registered with an MIT License.
 
+# Compiling
+
+Download the [Allegro Library](http://liballeg.org/download.html), extract it to a location on your computer you'll use for storing libraries and add the include, lib and bin directory paths to your project (Code::Blocks for example).
+
 
 

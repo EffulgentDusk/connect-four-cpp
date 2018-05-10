@@ -1,0 +1,10 @@
+/*
+ * Connect Four
+ * MIT License, Copyright 2018 Loukmane Maada, Soukaina Moumou & Anas Limouri
+ */
+#ifndef RESOURCE_RC_INCLUDED
+#define RESOURCE_RC_INCLUDED
+
+MAINICON ICON "connect4_icon.ico"
+
+#endif // RESOURCE_RC_INCLUDED

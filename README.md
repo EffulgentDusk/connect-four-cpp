@@ -7,7 +7,7 @@ A game of Connect Four created in C++ with Allegro, implementing an AI based on 
 
 This game was created by [Loukmane Maada](https://github.com/loding1397), [Soukaina Moumou](https://github.com/SoukaM) and [Anas Limouri](https://github.com/EffulgentDusk).  
 
-Some sounds used in the game are originally made by [Chris Kempson](https://github.com/chriskempson) and implemented in his [Connect four version](https://github.com/chriskempson/cpp-connect-four), registered with an MIT License.
+Some sounds used in the game are originally made by [Chris Kempson](https://github.com/chriskempson) and implemented in his [Connect Four game](https://github.com/chriskempson/cpp-connect-four), registered with an MIT License.
 
 # Compiling
 

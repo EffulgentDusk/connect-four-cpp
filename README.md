@@ -5,7 +5,7 @@
 # About
 A game of [Connect Four](https://en.wikipedia.org/wiki/Connect_Four) created in C++ with Allegro, implementing an AI based on simple [Minimax](https://en.wikipedia.org/wiki/Minimax) and [Minimax with Alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha–beta_pruning).  
 
-This game was created by [Loukmane Maada](https://github.com/loding1397), [Soukaina Moumou](https://github.com/SoukaM) and [Anas Limouri](https://github.com/EffulgentDusk).  
+This game was created by [Loukmane Maada](https://www.linkedin.com/in/loukmane-maada-638077151/), [Soukaina Moumou](https://www.linkedin.com/in/soukaina-moumou/) and [Anas Limouri](https://www.linkedin.com/in/anas-limouri/).  
 
 Some sounds used in the game are originally made by [Chris Kempson](https://github.com/chriskempson) and implemented in his [Connect Four game](https://github.com/chriskempson/cpp-connect-four), registered with an MIT License.
 

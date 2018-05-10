@@ -30,13 +30,13 @@ Jeu::Jeu()
     fenetreParametre = al_load_bitmap("images/popsettings.png");
     icone = al_load_bitmap("images/icon.png");
     al_set_display_icon(fenetre, icone);
-	queue = al_create_event_queue();
-	/// Les variables sound_bool, rencontrées plus loin dans le code sont utilisées pour éviter que certains sons sont répétées en boucle
+    queue = al_create_event_queue();
+    /// Les variables sound_bool, rencontrées plus loin dans le code sont utilisées pour éviter que certains sons sont répétées en boucle
 
     al_register_event_source(queue, al_get_display_event_source(fenetre));
-	al_register_event_source(queue, al_get_mouse_event_source());
+    al_register_event_source(queue, al_get_mouse_event_source());
 
-	enCours = true;
+    enCours = true;
     gagnant = 0;
     tour = 1;
 }

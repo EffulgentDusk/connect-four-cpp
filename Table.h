@@ -25,7 +25,7 @@ class Table
         /// Retourne vrai si une colonne de la table est vide
         bool colonneVide(int);
 
-        /// Permet de tester si un gagnant existe dans un instance de jeu
+        /// Permet de tester si un gagnant existe dans une instance de jeu
         bool verifierGagnant(int&);
 
         /// Permet de colorier les pions du gagnant

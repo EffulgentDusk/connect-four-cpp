@@ -15,34 +15,34 @@
 
 using namespace std;
 
-/// Gère la logique du jeu
+/// GÃ¨re la logique du jeu
 class Jeu
 {
     public:
         /// Constructeur de la classe Jeu
         Jeu();
 
-        /// Gère l'affichage de l'interface J vs.J
+        /// GÃ¨re l'affichage de l'interface J vs.J
         void joueurVSjoueur();
 
-        /// Gère l'affichage et les sons de l'interface J vs. AI, algo MinMax
+        /// GÃ¨re l'affichage et les sons de l'interface J vs. AI, algo MinMax
         void minMaxInterface();
 
-        /// Gère l'affichage et les sons de l'interface J vs. AI, algo AlphaBeta
+        /// GÃ¨re l'affichage et les sons de l'interface J vs. AI, algo AlphaBeta
         void alphaBetaInterface();
 
-        /// Gère l'affichage et les sons du choix de la difficulté, pour les deux algos
+        /// GÃ¨re l'affichage et les sons du choix de la difficultÃ©, pour les deux algos
         int choixDifficulte();
 
-        /// Implémentation de l'algo AlphaBeta
-        /// @param tour, profondeur, Tablea, et Tableb
+        /// ImplÃ©mentation de l'algo AlphaBeta
+        /// @param tour, profondeur, profondeur voulue, Tablea, et Tableb
         Table alphaBeta(int,int,int,Table,Table);
 
-        /// Gère l'affichage et les sons de pour les deux algos, et appelle @alphaBetaInterface et @minMaxinterface suivant le choix de l'algo
+        /// GÃ¨re l'affichage et les sons de pour les deux algos, et appelle @alphaBetaInterface et @minMaxinterface suivant le choix de l'algo
         void algorithmeInterface();
 
-        /// Implementation de l'algo AlphaBeta
-        /// @param tour, profondeur, Tablea, et Tableb
+        /// Implementation de l'algo Minimax
+        /// @param tour, profondeur, profondeur voulue
         Table minMax(int,int,int);
 
         /// Affiche le gagnant dans le mode J vs. AI
@@ -54,17 +54,17 @@ class Jeu
         /// Lance le jeu
         void commencerJeu();
 
-        /// Gère l'affichage et les sons des paramètres du jeu (continuer le jeu, rejouer, menu principal, règles)
+        /// GÃ¨re l'affichage et les sons des paramÃ¨tres du jeu (continuer le jeu, rejouer, menu principal, rÃ¨gles)
         void interfaceParametre(int);
 
-        /// Gère l'affichage de la table du jeu avec les pions
-        /// @appelle la méthode colorierGagnant pour colorier les pions
+        /// GÃ¨re l'affichage de la table du jeu avec les pions
+        /// @appelle la mÃ©thode colorierGagnant pour colorier les pions
         void afficherGrille(int = 0);
 
-        /// Gère l'affichage des pions correspondants au tour du joueur en cours
+        /// GÃ¨re l'affichage des pions correspondants au tour du joueur en cours
         void afficherJoueur(int);
 
-        /// Gère l'affichage du menu principal : les modes (J vs. J, J vs. AI), et les règles
+        /// GÃ¨re l'affichage du menu principal : les modes (J vs. J, J vs. AI), et les rÃ¨gles
         void afficherMenuPrincipal();
 
         /// Permet d'alterner les tours entre les deux joueurs au cours du jeu
@@ -73,10 +73,10 @@ class Jeu
         /// Permet de placer les pions sur l'interface graphique
         bool placerPion(int,int,int);
 
-        /// Remet le jeu à l'état initial (Table vide ayant le poids nul)
+        /// Remet le jeu Ã  l'Ã©tat initial (Table vide ayant le poids nul)
         void reinitialiserJeu();
 
-        /// Gère l'affichage et les sons de l'interface qui affiche les règles du jeu
+        /// GÃ¨re l'affichage et les sons de l'interface qui affiche les rÃ¨gles du jeu
         void afficheReglement();
 
         /// Met en pause le jeu pour un laps de temps
@@ -88,7 +88,7 @@ class Jeu
     protected:
 
     private:
-        /// Définition les interfaces utilisées par Allegro et nécessaires au fonctionnement de l'interface graphique du jeu
+        /// DÃ©finition les interfaces utilisÃ©es par Allegro et nÃ©cessaires au fonctionnement de l'interface graphique du jeu
         ALLEGRO_DISPLAY * fenetre;
         ALLEGRO_BITMAP * imageGrille;
         ALLEGRO_BITMAP * pionRouge;
@@ -102,7 +102,7 @@ class Jeu
         ALLEGRO_BITMAP * menuPrincipal;
         ALLEGRO_BITMAP * icone;
 
-        /// Définition de la partie évenemmentielle
+        /// DÃ©finition de la partie Ã©venemmentielle
         ALLEGRO_EVENT_QUEUE *queue;
         ALLEGRO_EVENT evenement;
 

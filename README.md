@@ -3,7 +3,7 @@
 ![Connect_four_gif](connect_four_gif.gif)
 
 # About
-A game of [Connect Four](https://en.wikipedia.org/wiki/Connect_Four) created in C++ with Allegro, implementing an AI based on simple [Minimax](https://en.wikipedia.org/wiki/Minimax) and [Minimax with Alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha–beta_pruning).  
+A game of [Connect Four](https://en.wikipedia.org/wiki/Connect_Four) created in C++ with [Allegro](https://en.wikipedia.org/wiki/Allegro_(software)), implementing an AI based on simple [Minimax](https://en.wikipedia.org/wiki/Minimax) and [Minimax with Alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha–beta_pruning).  
 
 This game was created by [Loukmane Maada](https://www.linkedin.com/in/loukmane-maada-638077151/), [Soukaina Moumou](https://www.linkedin.com/in/soukaina-moumou/) and [Anas Limouri](https://www.linkedin.com/in/anas-limouri/).  
 
